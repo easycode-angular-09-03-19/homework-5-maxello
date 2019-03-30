@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <div class="row">
+    <ng-container *ngFor="let item of albums">
+      <div class="col col-3">
+        <app-album-item [item]="item"></app-album-item>
+      </div>
+    </ng-container>
+  </div>
+</div>
