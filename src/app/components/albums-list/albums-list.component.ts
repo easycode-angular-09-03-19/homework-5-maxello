@@ -29,9 +29,7 @@ export class AlbumsListComponent implements OnInit {
 
     this.albumEvents.albumDeleteEventObservableSubject.subscribe((id: number) => {
       if (id) {
-        this.albums = this.albums.filter((item: Album) => {
-          return item.id !== id; 
-        });
+        this.albums = this.albums.filter((item: Album) => item.id !== id);
       }
     });
 

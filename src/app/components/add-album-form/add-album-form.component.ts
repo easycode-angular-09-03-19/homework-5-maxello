@@ -38,7 +38,7 @@ export class AddAlbumFormComponent implements OnInit {
   }
 
   onSave() {
-    this.albumService.editAlbum(this.album).subscribe((data: Album) => {
+    this.albumService.editAlbum({ ...this.album }).subscribe((data: Album) => {
       this.albumEvents.emitSaveAlbum(data);
       this.alertMessageService.emitShowAlert({
         message: `Album with id '${data.id}' was changed.`,
