@@ -1,0 +1,5 @@
+<div class="alert-wrapper" *ngIf="alertState.isShow">
+  <div class="alert" [ngClass]="messageData.isSuccess ? 'alert-success' : 'alert-danger'" role="alert">
+    {{ messageData.message }}
+  </div>
+</div>
